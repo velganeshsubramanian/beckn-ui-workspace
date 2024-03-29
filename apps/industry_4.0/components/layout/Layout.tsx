@@ -27,7 +27,7 @@ const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
     <Provider store={store}>
       <ThemeProvider enableSystem={true}>
         <Head>
-          <title>Suppliflow</title>
+          <title>Urban Vouge</title>
         </Head>
         <div className={`${styles.container} ${isHomepage ? styles.homepage : styles.minHeight}`}>
           <NextNProgress height={7} />

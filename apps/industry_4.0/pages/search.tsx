@@ -25,11 +25,9 @@ const Search = () => {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL
   const searchPayload = {
     context: {
-      domain: 'supply-chain-services:assembly'
+      domain: 'retail'
     },
-    category: {
-      categoryName: searchKeyword
-    },
+    searchString: 'T Shirt',
     location: '12.423423,77.325647'
   }
 

@@ -181,7 +181,7 @@ export const getPayloadForInitRequest = async (selectData: ParsedItemModel, ship
 export const getPaymentBreakDown = (initData: InitResponseModel[] | StatusResponseModel[]) => {
   const quote = initData[0].message.order.quote
   const breakUp = quote.breakup
-  const totalPricewithCurrent = `${quote.price.currency} ${quote.price.value}`
+  const totalPricewithCurrent = `₹ ${quote.price.value}`
 
   const breakUpMap: Record<string, string> = {}
 
@@ -191,7 +191,7 @@ export const getPaymentBreakDown = (initData: InitResponseModel[] | StatusRespon
       price: { currency, value }
     } = item
 
-    breakUpMap[title] = `${currency} ${value} `
+    breakUpMap[title] = `₹ ${value} `
   })
 
   return { breakUpMap, totalPricewithCurrent }

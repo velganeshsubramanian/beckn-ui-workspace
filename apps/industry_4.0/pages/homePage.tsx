@@ -105,7 +105,7 @@ const HomePage = () => {
           searchIcon={'/images/search.svg'}
           searchIconClickHandler={searchIconClickHandler}
           onEnterHandler={(e: { key: string }) => e.key === 'Enter' && navigateToSearchResults()}
-          placeHolder="Search for Service"
+          placeHolder="Search for Items"
         />
         <Flex
           justifyContent={'center'}

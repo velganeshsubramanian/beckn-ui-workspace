@@ -93,17 +93,17 @@ const ProductCardRenderer = (data: any) => {
         </Flex>
 
         <Flex
-          justifyContent="space-between"
+          justifyContent="end"
           alignItems="center"
           position="absolute"
           width="calc(100% - 30px)"
         >
-          <Flex columnGap={'5px'}>
+          {/* <Flex columnGap={'5px'}>
             <Image src={'images/meter.svg'} />
             <Text>
               {distance} {distance > 1 ? 'km' : 'm'}
             </Text>
-          </Flex>
+          </Flex> */}
 
           <Flex alignItems="center">
             <Image src={StarIcon} />

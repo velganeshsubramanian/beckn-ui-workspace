@@ -596,7 +596,7 @@ const OrderDetails = () => {
             >
               <Text
                 as={Typography}
-                text={t.assembly}
+                text={`Order Id : ${data.statusData[0]?.message?.order?.id}`}
                 fontSize="17px"
                 fontWeight="600"
               />
@@ -614,7 +614,7 @@ const OrderDetails = () => {
             >
               <Typography
                 variant="subTitleRegular"
-                text="RTAL Assembly Line"
+                text={data.statusData[0]?.message?.order?.items[0].name}
                 fontSize="12px"
               />
               <Typography

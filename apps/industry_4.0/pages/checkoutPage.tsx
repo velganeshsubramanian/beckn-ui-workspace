@@ -28,19 +28,19 @@ const CheckoutPage = () => {
   const [error, setError] = useState('')
   const [assemblyDetails, setAssemblyDetails] = useState<AssemblyData | null>(null)
   const [detailsForm, setdetailsForm] = useState<ShippingFormInitialValuesType>({
-    name: 'Antoine Dubois',
-    mobileNumber: '0612345678',
-    email: 'antoine.dubois@gmail.com',
-    address: '15 Rue du Soleil, Paris, France',
-    pinCode: '750013'
+    name: 'Rahul Raj',
+    mobileNumber: '9845898458',
+    email: 'rahul.raj@becknprotocol.io',
+    address: '43, Residency Road, Bengaluru',
+    pinCode: '560025'
   })
 
   const [billingFormData, setBillingFormData] = useState<ShippingFormInitialValuesType>({
-    name: 'Antoine Dubois',
-    mobileNumber: '0612345678',
-    email: 'antoine.dubois@gmail.com',
-    address: '15 Rue du Soleil, Paris, France',
-    pinCode: '750013'
+    name: 'Rahul Raj',
+    mobileNumber: '9845898458',
+    email: 'rahul.raj@becknprotocol.io',
+    address: '43, Residency Road, Bengaluru',
+    pinCode: '560025'
   })
 
   const [isBilling, setIsBilling] = useState(true)
@@ -150,27 +150,31 @@ const CheckoutPage = () => {
             justifyContent={'space-between'}
             alignItems="center"
           >
-            <Typography
+            {/* <Typography
               variant="subTitleSemibold"
               text={t.assembly}
-            />
-            <Typography
-              variant="subTitleRegular"
-              text={`${currency} ${value}`}
-            />
-          </Flex>
-          <Box pb={'4px'}>
+            /> */}
             <Typography
               variant="subTitleRegular"
               text={name}
             />
-          </Box>
-          <Box pb={'4px'}>
+            <Typography
+              variant="subTitleRegular"
+              text={`₹ ${value}`}
+            />
+          </Flex>
+          {/* <Box pb={'4px'}>
+            <Typography
+              variant="subTitleRegular"
+              text={name}
+            />
+          </Box> */}
+          {/* <Box pb={'4px'}>
             <Typography
               variant="subTitleRegular"
               text={`Qty: ${assemblyDetails?.quantity}`}
             />
-          </Box>
+          </Box> */}
         </DetailsCard>
         <ShippingSection
           sectionSubtitle={t.addShippingDetails}

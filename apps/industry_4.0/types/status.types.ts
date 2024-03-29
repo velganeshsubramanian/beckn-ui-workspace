@@ -133,7 +133,7 @@ interface CancellationTerms {
 interface Order {
   id: string
   provider: Provider
-  items: Item
+  items: Item[]
   fulfillments: Fulfillment[]
   quote: Quote
   billing: Billing

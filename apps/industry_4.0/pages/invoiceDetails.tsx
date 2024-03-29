@@ -34,7 +34,7 @@ const invoiceDetails = () => {
     }
   } = statusData[0]
 
-  const { name } = items
+  const { name } = items[0]
 
   const { t } = useLanguage()
   return (
@@ -55,21 +55,17 @@ const invoiceDetails = () => {
           justifyContent={'space-between'}
           alignItems="center"
         >
-          <Typography
-            variant="subTitleSemibold"
-            text={t.assembly}
-          />
+          <Box pb={'4px'}>
+            <Typography
+              variant="subTitleRegular"
+              text={name}
+            />
+          </Box>
           <Typography
             variant="subTitleRegular"
-            text={`${currency} ${value}`}
+            text={`₹ ${value}`}
           />
         </Flex>
-        <Box pb={'4px'}>
-          <Typography
-            variant="subTitleRegular"
-            text={name}
-          />
-        </Box>
       </DetailsCard>
       <DetailsCard>
         <Box pb={'15px'}>
