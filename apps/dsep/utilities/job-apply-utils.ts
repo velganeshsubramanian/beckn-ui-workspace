@@ -134,8 +134,6 @@ export const getConfirmPayloadForJobs = (jobInitRes: InitResponseModel) => {
         },
         message: {
           orders: {
-            // TODO :- from which field this ID would be matched
-            id: 'jdhflks',
             items: [
               {
                 id: itemID,
